@@ -18,7 +18,11 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{iftex}
+% pdfTeX-only ATS Unicode mappings; XeTeX/LuaTeX do not define these primitives.
+\ifPDFTeX
 \input{glyphtounicode}
+\fi
 %------------------------------
 
 %--------------FONT------------
@@ -36,11 +40,11 @@
 %-------------------------------
 
 %-----------MARGINS-------------
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\evensidemargin}{-0.65in}
+\addtolength{\textwidth}{1.3in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.5in}
 %-------------------------------
 
 %----------GENERAL-----------
@@ -56,7 +60,9 @@
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
+\ifPDFTeX
 \pdfgentounicode=1
+\fi
 %-------------------------------
 
 %-----------COMMANDS------------

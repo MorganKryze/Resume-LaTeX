@@ -1,4 +1,6 @@
 {
+  "latex-workshop.formatting.latex": "latexindent",
+  "latex-workshop.latexindent.path": ".vscode/latexindent-wrapper.sh",
   "cSpell.enableFiletypes": ["!latex"],
   "cSpell.words": [
     "colormasks",
